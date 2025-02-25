@@ -1,5 +1,6 @@
-FROM nginx
+FROM ubuntu
 WORKDIR /app
 COPY . /app
-RUN javac demo.java
-CMD [ "java", "demo" ]
+RUN apt-get update && apt install openjdk-17-jdk -y && javac Test.java 
+CMD ["java","Test"]
+
