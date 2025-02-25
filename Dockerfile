@@ -1,4 +1,4 @@
-FROM openjdk
+FROM nginx
 WORKDIR /app
 COPY . /app
 RUN javac demo.java
